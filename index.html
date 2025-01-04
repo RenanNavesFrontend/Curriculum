@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum vitae</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Heebo:wght@100..900&family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <p>RenanNaves</p>
+            </div>
+            <button id="menuToggle" class="menu-toggle">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="#home" id="homeA">Home</a></li>
+                    <li><a href="#about" id="aboutA">About</a></li>
+                    <li><a href="#projects" id="projectsA">Projects</a></li>
+                    <li><a href="#contact" id="contactA">Contact</a></li>
+                    <li>
+                        <a href="#" ><img id="ptImage" src="./images/PT.svg" alt="Portuguese" style="cursor: pointer;" onclick="toggleLanguage()"></a>
+                        <a href="#" ><img id="enImage" src="./images/EN.svg" alt="English" style="cursor: pointer; display: none;" onclick="toggleLanguage()"></a>
+                        
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="site">
+            <!-- Home Section -->
+            <div class="home" id="home">
+                <div class="pc-presentation">
+                    <div class="pc-img">
+                        <img src="./images/bro.png" alt="pc" class="pc">
+                    </div>
+                    <div class="presentation">
+                        <h1 id="headerName">Hi, I'm Renan</h1>
+                        <h2 id="headerRole">Front-End Developer Beginner</h2>
+                        <p id="homeDescription">
+                            I am passionate about technology and web development, with experience in HTML, CSS, JavaScript, and React since May 2024. Currently, I am focused on courses and hands-on projects to become an outstanding Front-end Developer. I am starting my degree in Systems Analysis in 2025, with plans for a postgraduate specialization in Web Development. I have a strong interest in creating intuitive and responsive interfaces, as well as solving challenging problems with creative solutions. My journey is marked by enthusiasm for continuous learning and growth, always exploring new technologies and best practices for developing modern applications. My goal is to contribute to projects that positively impact users while expanding my knowledge and being part of innovative and collaborative teams. 
+                        </p>
+                        <div class="btns">
+                            <button type="button" class="resume">
+                                <img src="./images/ReadCvLogo.png" alt="resume" class="resume-img" id="resumeImg">
+                                <a href="./curriculoSite/curriculo.html"><span class="button-text" id="btResume">My resume</span></a>
+                            </button>
+                            <button type="button" class="arrow">
+                                <a href="#contact"><span class="button-text" id="btContact">Get in touch</span></a>
+                                <img src="./images/ArrowRight.png" alt="arrow" class="arrow-img">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="vector-container"></div>
+                <img src="./images/Vector.png" alt="bottom arrow" class="vector-image">
+            </div>
+            <!-- About Section -->
+            <div class="about" id="about">
+                <div class="about-box">
+                    <div class="work-img">
+                        <img src="./images/Trabalhando.jpeg" alt="working" class="working">
+                    </div>
+                    <div class="about-container">
+                        <nav class="js-r-n-t">
+                            <ul class="about-list">
+                                <li><img src="./images/JavaScript.png" alt="JavaScript"></li>
+                                <li><img src="./images/React.png" alt="React"></li>
+                                <li><img src="./images/Node.js.png" alt="Node.js"></li>
+                                <li><img src="./images/Tailwind.png" alt="Tailwind"></li>
+                            </ul>
+                        </nav>
+                        <h3 id="aboutHeader">About me</h3>
+                        <h2 id="aboutRole">I'm a passionate software developer looking for my first opportunity!</h2>
+                        <p id="aboutDescription">
+                            Hi! I'm a beginner front-end developer learning to build responsive and interactive websites using HTML5, CSS3, and JavaScript. I'm familiar with tools like Git/GitHub and exploring CSS frameworks and responsive design. Currently, I'm improving my skills in advanced JavaScript and UX/UI design basics. I'm passionate about creating user-friendly interfaces and open to learning and collaboration...
+                        </p>
+                        <div class="resume-group">
+                            <button type="button" class="resume-button">
+                               <a href="./resumo/resumo.html"><img src="./images/Vector (1).png" alt="resume-icon" class="resume-img" id="btSummary"><span id="summaryText">My summary</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Projects Section -->
+            <div class="projects" id="projects">
+                <div class="title-h2">
+                    <h3 class="project-title" id="projectsTitle">Projects</h3>
+                    <h2 id="projectsHeader">Take a look at my <br> highlighted projects!</h2>
+                </div>
+                <div class="allCards">
+                    <!-- Card FAQ -->
+                    <div class="cards-projects">
+                        <div class="faq" onclick="handleCardClick(this, event)" data-url="">
+                            <h3 id="faq">FAQ</h3>
+                            <img src="./images/projeto 1.png" alt="FAQ" class="faq-image">
+                            <div class="faq-group">
+                                <p id="faqP">A FAQ page that provides quick answers to common questions, featuring an intuitive accordion-style interface.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <!-- Card Form -->
+                    <div class="cards-projects">
+                        <div class="form" onclick="handleCardClick(this, event)" data-url="">
+                            <h3 id="form">Form</h3>
+                            <img src="./images/projeto 2.png" alt="FORM" class="form-image">
+                            <div class="form-group">
+                                <p id="formP">A form is an HTML element used to collect user input and submit data to a server for processing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Landing Page -->
+                    <div class="cards-projects">
+                        <div class="landing-page" onclick="handleCardClick(this, event)" data-url="">
+                            <h3 id="ld">Landing page</h3>
+                            <img src="./images/projeto 3.png" alt="Landing Page" class="landing-image">
+                            <div class="landing-group">
+                                <p id="ldP">A landing page is a single web page aimed at capturing leads or driving specific actions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Calculator -->
+                    <div class="cards-projects">
+                        <div class="calculator" onclick="handleCardClick(this, event)" data-url="">
+                            <h3 id="tip">Tip Calculator</h3>
+                            <img src="./images/projeto 4.png" alt="Calculator" class="calculator-image">
+                            <div class="calculator-group">
+                                <p id="tipP">A tip calculator helps users determine the tip amount based on the bill total and chosen percentage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Portfolio -->
+                    <div class="cards-projects">
+                        <div class="portfolio" onclick="handleCardClick(this, event)" data-url="">
+                            <h3 id="port">Portfolio</h3>
+                            <img src="./images/projeto 5.png" alt="Portfolio" class="portfolio-image">
+                            <div class="portfolio-group">
+                                <p id="portP">A personal portfolio showcasing my projects and skills, built with HTML, CSS, and JavaScript.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-group">
+                    <button type="button" class="project-button">
+                       <a href="./Portfolio/portfolio.html" id="see">See all</a>
+                        <img src="./images/Vector (2).png" alt="vector-secound" class="vector-project">
+                    </button>
+                </div>
+
+                
+            
+              <!-- Modal -->
+    <div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+        <div id="modal" class="modal">
+            <button class="close-modal" onclick="closeModal()">X</button>
+            <img id="modal-image" src="" alt="Imagem Ampliada">
+        </div>
+    </div>
+</div>
+            
+            
+            <!-- Contact Section -->
+            <div class="contact" id="contact">
+                <div class="contact-group">
+                    <div class="contact-column">
+                        <div class="self-image">
+                            <img src="./images/selfie.jpeg" alt="avatar" class="self">
+                        </div>
+                        <div class="contact-text">
+                            <h3 id="cH">Contact</h3>
+                            <h2 id="contactHeader">Enjoyed my work? Let's work together!</h2>
+                            <p id="contactDescription">
+                                I’m always up for a chat. <br> Pop me an email at
+                                <a href="mailto:renan.naves.frontend@gmail.com" class="email-color">renan.naves.frontend@gmail.com</a>
+                                or <br> give me a shout on social media.
+                            </p>
+                        </div>
+                    </div>
+                    <form action="/submit" method="post" class="form-contact" id="contactForm">
+                        <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Name" class="name" required>
+                        <label for="email"></label>
+                        <input type="email" id="email" name="email" placeholder="E-mail" class="email" required>
+                        <label for="message"></label>
+                        <textarea name="message" id="message" rows="6" placeholder="Your message" class="message" required></textarea>
+                        <button type="submit" class="contact-submit" id="cM" value="Send">
+                            Send me a message
+                            <img src="./images/Vector (2).png" alt="vector" class="vector-message">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="final">
+            <div class="final-p"> 
+                <p id="figma">Renan Naves 2024 - Layout inspired by <br> Figma templates</p>
+            </div>
+        </div>
+    </footer>
+    <a href="#" id="scrollToTop" class="scroll-top-arrow">
+        <img src="./images/State=Default, Variant=On surface.png" alt="Voltar ao topo" class="arrow-up">
+    </a>
+
+     <!-- EmailJS Scripts -->
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+     <script type="text/javascript">
+         (function() {
+             emailjs.init("dHWTXz9J0th3ovjzz");
+         })();
+ 
+         // Submit handler for the contact form
+         document.getElementById('contactForm').addEventListener('submit', function(event) {
+             event.preventDefault(); // Prevent form from submitting normally
+ 
+             // Send email with EmailJS
+             var formData = new FormData(this);
+ 
+             emailjs.sendForm('service_z69qksr', 'template_innw8pg', this)
+                 .then(function(response) {
+                     alert('Your message has been sent successfully!');
+                     event.target.reset();
+                 }, function(error) {
+                     alert('Failed to send message. Please try again later.');
+                 });
+         });
+     </script>
+</body>
+
+</html>
