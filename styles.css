@@ -733,6 +733,12 @@ footer {
  .arrow-up {
   margin-top: 0.5rem;
  }
+.socialMedia {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+ }
 
 
 /* Media query para mobile */
